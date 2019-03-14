@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileWriter
 
 class ProcLg() : ProgLg() {
@@ -9,13 +8,14 @@ class ProcLg() : ProgLg() {
     }
 
     override fun InData(str: String) {
-        isAbstractDataType = when (str.split(' ')[1]) {
+        isAbstractDataType = when (str.split(' ')[3]) {
             "0" -> false
             "1" -> true
             else -> null
         }
-        creationYear = str.split(' ')[2]
+        creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Proc\tYear creation: $creationYear\t$isAbstractDataType\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Proc\nYear creation: $creationYear\nMentions: $mentions\nIs abstract data type: $isAbstractDataType\n\n")
 }

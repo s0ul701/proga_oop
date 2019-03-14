@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileWriter
 
 class OopLg() : ProgLg() {
@@ -9,14 +8,15 @@ class OopLg() : ProgLg() {
     }
 
     override fun InData(str: String) {
-        inh = when (str.split(' ')[1]) {
+        inh = when (str.split(' ')[3]) {
             "0" -> Inheritance.SINGLE
             "1" -> Inheritance.PLURAL
             "2" -> Inheritance.INTERFACE
             else -> null
         }
-        creationYear = str.split(' ')[2]
+        creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("OOP\tYear creation: $creationYear\t$inh\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: OOP\nYear creation: $creationYear\nMentions: $mentions\nInheritance: $inh\n\n")
 }

@@ -1,12 +1,11 @@
-import java.io.File
 import java.io.FileWriter
 
 open class ProgLg() {
     protected var creationYear : String ? = null
     protected var mentions: Int? = null
     constructor(str: String) : this() {
-        creationYear = str.split(' ')[2]
-        mentions = str.split(' ')[3].toInt()
+        creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
         In(str)
     }
 
@@ -14,8 +13,8 @@ open class ProgLg() {
         fun In(str : String) : ProgLg  {
             var pg : ProgLg = ProgLg()
             when (str.split(' ')[0]) {
-                "1" -> pg = ProcLg(str)
-                "2" -> pg = OopLg(str)
+                "0" -> pg = ProcLg(str)
+                "1" -> pg = OopLg(str)
             }
             return pg
         }
