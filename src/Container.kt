@@ -15,7 +15,7 @@ class Container {
     }
 
     fun Out(fileOut : FileWriter) {
-        fileOut.write("Elements:\n")
+        fileOut.write("Elements:\n\n")
         for (item in pg) {
             item.OutData(fileOut)
         }
