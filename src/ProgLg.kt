@@ -19,6 +19,7 @@ open class ProgLg() {
         }
     }
 
+    open fun NumberOfYears(): Int? = 2018 - (creationYear?.toInt() ?: 2019)
 
     open fun InData(str: String) {}
 
