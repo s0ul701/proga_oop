@@ -3,8 +3,10 @@ import java.io.FileWriter
 
 open class ProgLg() {
     protected var creationYear : String ? = null
+    protected var mentions: Int? = null
     constructor(str: String) : this() {
         creationYear = str.split(' ')[2]
+        mentions = str.split(' ')[3].toInt()
         In(str)
     }
 
