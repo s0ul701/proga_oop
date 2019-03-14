@@ -11,10 +11,6 @@ fun main(args: Array<String>) {
         exitProcess(1)
     }
 
-//    val a = fileOut.write("1234567")
-//    fileOut.close()
-//    fileIn.close()
-
     println("***\nStart\n***\n")
 
     var cont : Container = Container()
@@ -36,11 +32,4 @@ fun main(args: Array<String>) {
     cont.Out(fileOut2)
     fileOut2.close()
     println("***\nStop\n***\n")
-
-
-
-
-
-
-
 }
