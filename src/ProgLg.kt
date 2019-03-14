@@ -1,10 +1,9 @@
-import java.io.File
 import java.io.FileWriter
 
 open class ProgLg() {
     protected var creationYear : String ? = null
     constructor(str: String) : this() {
-        creationYear = str.split(' ').last()
+        creationYear = str.split(' ')[2]
         In(str)
     }
 

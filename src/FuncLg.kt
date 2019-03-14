@@ -1,7 +1,7 @@
 import java.io.FileWriter
 
 class FuncLg(): ProgLg() {
-    private var tipization: Tipization? = null
+    private var typing: Typing? = null
     private var isLazyCalc: Boolean? = null
 
     constructor(str: String): this() {
@@ -9,19 +9,19 @@ class FuncLg(): ProgLg() {
     }
 
     override fun InData(str: String) {
-        tipization = when (str.split(' ')[1]) {
-            "0" -> Tipization.STRONG
-            "1" -> Tipization.DYNAMIC
+        typing = when (str.split(' ')[2]) {
+            "0" -> Typing.STRONG
+            "1" -> Typing.DYNAMIC
             else -> null
         }
-        isLazyCalc = when (str.split(' ')[2]) {
+        isLazyCalc = when (str.split(' ')[3]) {
             "0" -> false
             "1" -> true
             else -> null
         }
-        creationYear = str.split(' ').last()
+        creationYear = str.split(' ')[1]
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Func\tYear creation: $creationYear\t$tipization\t$isLazyCalc\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Func\nYear creation: $creationYear\nTyping: $typing\nIs lazy calculations: $isLazyCalc\n\n")
 
 }
