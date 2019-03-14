@@ -4,7 +4,7 @@ import java.io.FileWriter
 class OopLg() : ProgLg() {
     private var inh : Inheritance ? = null
 
-    constructor(str: String) : this () {
+    constructor(str: String) : this() {
         InData(str)
     }
 
