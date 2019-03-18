@@ -15,7 +15,7 @@ class Container {
     }
 
     fun Out(fileOut : FileWriter) {
-        fileOut.write("Elements:\n")
+        fileOut.write("Elements:\n\n")
         for (item in pg) {
             item.OutData(fileOut)
         }
@@ -23,5 +23,13 @@ class Container {
 
     fun Clear() {
         pg.clear()
+    }
+
+    fun FilterOut(fileOut : FileWriter) {
+        for(item in pg) {
+            if (item::class.toString() == "class ProcLg") {
+                item.OutData(fileOut)
+            }
+        }
     }
 }
