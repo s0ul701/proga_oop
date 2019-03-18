@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import kotlin.system.exitProcess
@@ -13,7 +12,7 @@ fun main(args: Array<String>) {
 
     println("***\nStart\n***\n")
 
-    var cont : Container = Container()
+    val cont : Container = Container()
 
     val fileIn = FileReader(args[0])
     cont.In(fileIn)
@@ -24,6 +23,12 @@ fun main(args: Array<String>) {
     cont.Out(fileOut1)
     fileOut1.close()
     println("***\nFilled file\n***\n")
+
+    val fileOut3 = FileWriter(args[1], false)
+    cont.Sort()
+    cont.Out(fileOut3)
+    fileOut3.close()
+    println("***\nFilled file (sort)\n***\n")
 
     cont.Clear()
     println("***\nErased container\n***\n")

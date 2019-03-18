@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 
@@ -23,5 +22,16 @@ class Container {
 
     fun Clear() {
         pg.clear()
+    }
+
+    fun Sort() {
+        for (i in pg) {
+            for (j in pg) {
+                if (j.NumberOfYears().toInt() < i.NumberOfYears().toInt()) {
+                    pg[pg.indexOf(i)] = j
+                    pg[pg.indexOf(j)] = i
+                }
+            }
+        }
     }
 }
