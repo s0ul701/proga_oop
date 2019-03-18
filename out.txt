@@ -1,2 +1,10 @@
 Elements:
-
+Proc	Year creation: 1900	false
+Proc	Year creation: 1800	true
+OOP	Year creation: 1700	SINGLE
+OOP	Year creation: 1600	PLURAL
+OOP	Year creation: 1500	INTERFACE
+Func	Year creation: 666	STRONG	false
+Func	Year creation: 777	STRONG	true
+Func	Year creation: 888	DYNAMIC	false
+Func	Year creation: 999	DYNAMIC	true

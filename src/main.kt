@@ -1,7 +1,9 @@
+import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import kotlin.system.exitProcess
 
+// val - неизмен, var - измен
 
 fun main(args: Array<String>) {
     if (args.size != 2) {
