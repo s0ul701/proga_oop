@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import kotlin.system.exitProcess
@@ -13,7 +12,7 @@ fun main(args: Array<String>) {
 
     println("***\nStart\n***\n")
 
-    var cont : Container = Container()
+    val cont = Container()
 
     val fileIn = FileReader(args[0])
     cont.In(fileIn)

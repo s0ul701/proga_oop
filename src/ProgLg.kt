@@ -1,4 +1,3 @@
-import java.io.File
 import java.io.FileWriter
 
 open class ProgLg() {
@@ -18,7 +17,6 @@ open class ProgLg() {
             return pg
         }
     }
-
 
     open fun InData(str: String) {}
 
