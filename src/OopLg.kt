@@ -8,13 +8,14 @@ class OopLg() : ProgLg() {
     }
 
     override fun InData(str: String) {
-        inh = when (str.split(' ')[2]) {
+        inh = when (str.split(' ')[3]) {
             "0" -> Inheritance.SINGLE
             "1" -> Inheritance.PLURAL
             "2" -> Inheritance.INTERFACE
             else -> null
         }
         creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
     }
 
     override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: OOP\nYear creation: $creationYear\nInheritance: $inh\nNumber of years: ${this.NumberOfYears()}\n\n")

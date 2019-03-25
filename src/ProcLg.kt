@@ -8,12 +8,13 @@ class ProcLg() : ProgLg() {
     }
 
     override fun InData(str: String) {
-        isAbstractDataType = when (str.split(' ')[2]) {
+        isAbstractDataType = when (str.split(' ')[3]) {
             "0" -> false
             "1" -> true
             else -> null
         }
         creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
     }
 
     override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Proc\nYear creation: $creationYear\nIs abstract data type: $isAbstractDataType\nNumber of years: ${this.NumberOfYears()}\n\n")
