@@ -13,6 +13,7 @@ open class ProgLg() {
             when (str.split(' ')[0]) {
                 "0" -> pg = ProcLg(str)
                 "1" -> pg = OopLg(str)
+                "2" -> pg = FuncLg(str)
             }
             return pg
         }
