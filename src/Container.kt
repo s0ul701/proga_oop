@@ -25,11 +25,12 @@ class Container {
     }
 
     fun Sort() {
-        for (i in pg) {
-            for (j in pg) {
-                if (j.NumberOfYears().toInt() < i.NumberOfYears().toInt()) {
-                    pg[pg.indexOf(i)] = j
-                    pg[pg.indexOf(j)] = i
+        for (i in 0 until this.len) {
+            for (j in i until this.len) {
+                if (this.pg[i].NumberOfYears() > this.pg[j].NumberOfYears()) {
+                    val tmp = this.pg[i]
+                    this.pg[i] = this.pg[j]
+                    this.pg[j] = tmp
                 }
             }
         }
