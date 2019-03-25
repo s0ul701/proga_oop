@@ -35,4 +35,12 @@ class Container {
             }
         }
     }
+
+    fun FilterOut(fileOut : FileWriter) {
+        for(item in pg) {
+            if (item::class.toString() == "class ProcLg") {
+                item.OutData(fileOut)
+            }
+        }
+    }
 }
