@@ -17,5 +17,5 @@ class ProcLg() : ProgLg() {
         mentions = str.split(' ')[2].toInt()
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Proc\nYear creation: $creationYear\nIs abstract data type: $isAbstractDataType\nNumber of years: ${this.NumberOfYears()}\n\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Proc\nYear creation: $creationYear\nIs abstract data type: $isAbstractDataType\nNumber of years: ${this.NumberOfYears()}\nMentions: $mentions\n\n")
 }

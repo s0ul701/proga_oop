@@ -9,19 +9,20 @@ class FuncLg(): ProgLg() {
     }
 
     override fun InData(str: String) {
-        tipization = when (str.split(' ')[2]) {
+        tipization = when (str.split(' ')[3]) {
             "0" -> Tipization.STRONG
             "1" -> Tipization.DYNAMIC
             else -> null
         }
-        isLazyCalc = when (str.split(' ')[3]) {
+        isLazyCalc = when (str.split(' ')[4]) {
             "0" -> false
             "1" -> true
             else -> null
         }
         creationYear = str.split(' ')[1]
+        mentions = str.split(' ')[2].toInt()
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Func\nYear creation: $creationYear\nNumber of years: ${this.NumberOfYears()}\nTyping: $tipization\nIs lazy calc: $isLazyCalc\n\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Func\nYear creation: $creationYear\nNumber of years: ${this.NumberOfYears()}\nTyping: $tipization\nIs lazy calc: $isLazyCalc\nMentions: $mentions\n\n")
 
 }
