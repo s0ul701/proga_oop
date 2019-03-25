@@ -17,5 +17,5 @@ class ProcLg() : ProgLg() {
         creationYear = str.split(' ')[2]
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Proc\tYear creation: $creationYear\t$isAbstractDataType\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Proc\nYear creation: $creationYear\nIs abstract data type: $isAbstractDataType\n\n")
 }

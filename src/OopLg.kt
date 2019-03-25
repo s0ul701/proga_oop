@@ -18,5 +18,5 @@ class OopLg() : ProgLg() {
         creationYear = str.split(' ')[2]
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("OOP\tYear creation: $creationYear\t$inh\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: OOP\nYear creation: $creationYear\nInheritance: $inh\n\n")
 }
