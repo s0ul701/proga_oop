@@ -22,6 +22,6 @@ class FuncLg(): ProgLg() {
         creationYear = str.split(' ')[1]
     }
 
-    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Func\nYear creation: $creationYear\nTyping: $tipization\nIs lazy calc: $isLazyCalc\n\n")
+    override fun OutData(fileOut: FileWriter) = fileOut.write("Language type: Func\nYear creation: $creationYear\nNumber of years: ${this.NumberOfYears()}\nTyping: $tipization\nIs lazy calc: $isLazyCalc\n\n")
 
 }
