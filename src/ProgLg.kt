@@ -1,27 +1,66 @@
 import java.io.FileWriter
 
 open class ProgLg() {
-    protected var creationYear : String ? = null
+    var creationYear : Int? = null
     protected var mentions: Int? = null
+
     constructor(str: String) : this() {
-        creationYear = str.split(' ')[1]
-        mentions = str.split(' ')[2].toInt()
+        creationYear = try {
+            str.split(' ')[1].toInt()
+        }
+        catch (e: IndexOutOfBoundsException) {
+            println("Warn: ProgLg.creationYear\nSmall quantity of initial parameters.\n\n")
+            null
+        }
+        catch (e: NumberFormatException) {
+            println("Warn: ProgLg.creationYear\nWrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
+            null
+        }
+
+        mentions = try {
+            str.split(' ')[2].toInt()
+        }
+        catch (e: IndexOutOfBoundsException) {
+            println("Warn: ProcLg.mentions\nSmall quantity of initial parameters.\n\n")
+            null
+        }
+        catch (e: NumberFormatException) {
+            println("Warn: ProcLg.mentions\nWrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
+            null
+        }
         In(str)
     }
 
     companion object Companion {
-        fun In(str : String) : ProgLg  {
-            var pg : ProgLg = ProgLg()
-            when (str.split(' ')[0]) {
-                "0" -> pg = ProcLg(str)
-                "1" -> pg = OopLg(str)
-                "2" -> pg = FuncLg(str)
+        fun In(str : String) : ProgLg? {
+            var pg = ProgLg()
+
+            try {
+                pg = when (str.split(' ')[0]) {
+                    "0" -> ProcLg(str)
+                    "1" -> OopLg(str)
+                    "2" -> FuncLg(str)
+                    else -> {
+                        println("Warn: ProgLg.In\nWrong initial parameter \"langType\".\n\n")
+                        return null
+                    }
+                }
+            }
+            catch (e: IndexOutOfBoundsException) {
+                println("Warn: ProgLg.langType\nSmall quantity of initial parameters.\n\n")
+                return null
             }
             return pg
         }
     }
 
-    open fun NumberOfYears(): Int = 2018 - (creationYear?.toInt() ?: 2019)
+    open fun NumberOfYears(): Int? {
+        return if (creationYear != null) {
+            (2019 - creationYear!!)
+        } else {
+            null
+        }
+    }
 
     open fun InData(str: String) {}
 

@@ -3,7 +3,7 @@ import java.io.FileWriter
 
 class Container {
     var len : Int = 0
-    var pg : MutableList<ProgLg> = mutableListOf()
+    var pg : MutableList<ProgLg?> = mutableListOf()
 
     fun In(fileIn : FileReader) {
         val lines : List<String> = fileIn.readLines()
@@ -16,7 +16,12 @@ class Container {
     fun Out(fileOut : FileWriter) {
         fileOut.write("Elements:\n\n")
         for (item in pg) {
-            item.OutData(fileOut)
+            if (item != null) {
+                item.OutData(fileOut)
+            }
+            else {
+                fileOut.write("-\n\n")
+            }
         }
     }
 
@@ -25,12 +30,36 @@ class Container {
     }
 
     fun Sort() {
-        for (i in 0 until this.len) {
-            for (j in i until this.len) {
-                if (this.pg[i].NumberOfYears() > this.pg[j].NumberOfYears()) {
-                    val tmp = this.pg[i]
-                    this.pg[i] = this.pg[j]
-                    this.pg[j] = tmp
+        for (i in 0 until len) {
+            if (pg[i] == null) {
+                pg.add(pg.removeAt(i))
+                continue
+            }
+            else
+                if (pg[i]!!.NumberOfYears() == null) {
+                    pg.add(pg.removeAt(i))
+                    continue
+                }
+        }
+
+        for (i in 0 until len) {
+            if (pg[i] == null)
+                break
+            else
+                if (pg[i]!!.NumberOfYears() == null)
+                    break
+
+            for (j in i until len) {
+                if (pg[j] == null)
+                    break
+                else
+                    if (pg[j]!!.NumberOfYears() == null)
+                        break
+
+                if (pg[i]!!.NumberOfYears()!! > pg[j]!!.NumberOfYears()!!) {
+                    val tmp = pg[i]
+                    pg[i] = pg[j]
+                    pg[j] = tmp
                 }
             }
         }
@@ -38,9 +67,10 @@ class Container {
 
     fun FilterOut(fileOut : FileWriter) {
         for(item in pg) {
-            if (item::class.toString() == "class ProcLg") {
-                item.OutData(fileOut)
-            }
+            if (item != null)
+                if (item::class.toString() == "class ProcLg") {
+                    item.OutData(fileOut)
+                }
         }
     }
 }
