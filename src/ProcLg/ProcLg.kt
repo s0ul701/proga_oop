@@ -1,7 +1,10 @@
+package ProcLg
+
+import ProgLg.ProgLg
 import java.io.FileWriter
 
 class ProcLg() : ProgLg() {
-    private var isAbstractDataType : Boolean? = null
+    var isAbstractDataType : Boolean? = null
 
     constructor(str: String) : this() {
         InData(str)
@@ -82,6 +85,4 @@ class ProcLg() : ProgLg() {
         fileOut.write("\n")
 
     }
-
-//    = fileOut.write("Language type: Proc\nYear creation: $creationYear\nIs abstract data type: $isAbstractDataType\nNumber of years: ${this.NumberOfYears()}\nMentions: $mentions\n\n")
 }

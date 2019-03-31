@@ -1,8 +1,11 @@
+package FuncLg
+
+import ProgLg.*
 import java.io.FileWriter
 
 class FuncLg(): ProgLg() {
-    private var tipization: Tipization? = null
-    private var isLazyCalc: Boolean? = null
+    var tipization: Tipization? = null
+    var isLazyCalc: Boolean? = null
 
     constructor(str: String): this() {
         InData(str)
@@ -91,10 +94,10 @@ class FuncLg(): ProgLg() {
         }
 
         if (tipization != null) {
-            fileOut.write("Tipization: $tipization\n")
+            fileOut.write("FuncLg.Tipization: $tipization\n")
         }
         else {
-            fileOut.write("Tipization: -\n\n")
+            fileOut.write("FuncLg.Tipization: -\n\n")
         }
 
         if (isLazyCalc != null) {

@@ -1,7 +1,10 @@
+package OopLg
+
+import ProgLg.*
 import java.io.FileWriter
 
 class OopLg() : ProgLg() {
-    private var inh : Inheritance ? = null
+    var inh : Inheritance ? = null
 
     constructor(str: String) : this() {
         InData(str)
@@ -38,7 +41,7 @@ class OopLg() : ProgLg() {
                 "1" -> Inheritance.PLURAL
                 "2" -> Inheritance.INTERFACE
                 else -> {
-                    println("Warn: OopLg.inh\nWrong initial parameter \"Inheritance\".\n\n")
+                    println("Warn: OopLg.inh\nWrong initial parameter \"OopLg.Inheritance\".\n\n")
                     null
                 }
             }
@@ -74,10 +77,10 @@ class OopLg() : ProgLg() {
         }
 
         if (inh != null) {
-            fileOut.write("Inheritance: $inh\n\n")
+            fileOut.write("OopLg.Inheritance: $inh\n\n")
         }
         else {
-            fileOut.write("Inheritance: -\n\n")
+            fileOut.write("OopLg.Inheritance: -\n\n")
         }
 
         fileOut.write("\n")

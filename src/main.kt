@@ -1,6 +1,9 @@
+import java.io.FileNotFoundException
 import java.io.FileReader
-import java.io.FileWriter
 import kotlin.system.exitProcess
+
+import Container.*
+import java.io.FileWriter
 
 // val - неизмен, var - измен
 
@@ -14,7 +17,16 @@ fun main(args: Array<String>) {
 
     val cont = Container()
 
-    val fileIn = FileReader(args[0])
+    val fileIn: FileReader
+
+    try {
+        fileIn = FileReader(args[0])
+    }
+    catch (e: FileNotFoundException) {
+        println("File not exist!\n")
+        return
+    }
+
     cont.In(fileIn)
     fileIn.close()
     println("***\nFilled container\n***\n")
@@ -43,3 +55,5 @@ fun main(args: Array<String>) {
     fileOut2.close()
     println("***\nStop\n***\n")
 }
+
+//ввод, вывод на всех уровнях, сортировака, фильтрация, расчетаня функция

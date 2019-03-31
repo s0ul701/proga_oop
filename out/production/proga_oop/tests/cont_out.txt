@@ -1,0 +1,91 @@
+Elements:
+
+Language type: Proc
+Year creation: 1900
+Quantity years from creation: 119
+Mentions in Internet: 100
+Is abstract data type: false
+
+
+Language type: Proc
+Year creation: 1800
+Quantity years from creation: 219
+Mentions in Internet: 200
+Is abstract data type: true
+
+
+Language type: Oop
+Year creation: 1700
+Quantity years from creation: 319
+Mentions in Internet: 300
+OopLg.Inheritance: SINGLE
+
+
+Language type: Oop
+Year creation: 1600
+Quantity years from creation: 419
+Mentions in Internet: 400
+OopLg.Inheritance: PLURAL
+
+
+Language type: Oop
+Year creation: 1500
+Quantity years from creation: 519
+Mentions in Internet: 500
+OopLg.Inheritance: INTERFACE
+
+
+Language type: Func
+Year creation: 2000
+Quantity years from creation: 19
+Mentions in Internet: 1
+FuncLg.Tipization: STRONG
+Is lazy calc: false
+
+
+Language type: Func
+Year creation: 2001
+Quantity years from creation: 18
+Mentions in Internet: 2
+FuncLg.Tipization: STRONG
+Is lazy calc: true
+
+
+Language type: Func
+Year creation: 2002
+Quantity years from creation: 17
+Mentions in Internet: 3
+FuncLg.Tipization: DYNAMIC
+Is lazy calc: false
+
+
+Language type: Func
+Year creation: 2003
+Quantity years from creation: 16
+Mentions in Internet: 4
+FuncLg.Tipization: DYNAMIC
+Is lazy calc: true
+
+
+Language type: Proc
+Year creation: 1000
+Quantity years from creation: 1019
+Mentions in Internet: 11
+Is abstract data type: true
+
+
+Language type: Oop
+Year creation: 1001
+Quantity years from creation: 1018
+Mentions in Internet: 12
+OopLg.Inheritance: INTERFACE
+
+
+Language type: Func
+Year creation: 1002
+Quantity years from creation: 1017
+Mentions in Internet: 13
+FuncLg.Tipization: DYNAMIC
+Is lazy calc: true
+
+

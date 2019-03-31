@@ -1,4 +1,9 @@
+package ProgLg
+
 import java.io.FileWriter
+import ProcLg.*
+import OopLg.*
+import FuncLg.*
 
 open class ProgLg() {
     var creationYear : Int? = null

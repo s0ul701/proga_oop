@@ -1,5 +1,10 @@
+package Container
+
 import java.io.FileReader
 import java.io.FileWriter
+
+import ProcLg.*
+import ProgLg.*
 
 class Container {
     var len : Int = 0
@@ -68,7 +73,7 @@ class Container {
     fun FilterOut(fileOut : FileWriter) {
         for(item in pg) {
             if (item != null)
-                if (item::class.toString() == "class ProcLg") {
+                if (item is ProcLg) {
                     item.OutData(fileOut)
                 }
         }
