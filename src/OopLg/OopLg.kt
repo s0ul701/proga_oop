@@ -3,10 +3,10 @@ package OopLg
 import ProgLg.*
 import java.io.FileWriter
 
-class OopLg() : ProgLg() {
-    var inh : Inheritance ? = null
+class OopLg(): ProgLg() {
+    var inh: Inheritance ? = null
 
-    constructor(str: String) : this() {
+    constructor(str: String): this() {
         InData(str)
     }
 
@@ -15,11 +15,13 @@ class OopLg() : ProgLg() {
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: OopLg.creationYear\nSmall quantity of initial parameters.\n\n")
+            println("Warn: OopLg.creationYear\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: OopLg.creationYear\nWrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
+            println("Warn: OopLg.creationYear\n" +
+                    "Wrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -27,11 +29,13 @@ class OopLg() : ProgLg() {
             str.split(' ')[2].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: OopLg.mentions\nSmall quantity of initial parameters.\n\n")
+            println("Warn: OopLg.mentions\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: OopLg.mentions\nWrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
+            println("Warn: OopLg.mentions\n" +
+                    "Wrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -41,13 +45,15 @@ class OopLg() : ProgLg() {
                 "1" -> Inheritance.PLURAL
                 "2" -> Inheritance.INTERFACE
                 else -> {
-                    println("Warn: OopLg.inh\nWrong initial parameter \"OopLg.Inheritance\".\n\n")
+                    println("Warn: OopLg.inh\n" +
+                            "Wrong initial parameter \"OopLg.Inheritance\".\n\n")
                     null
                 }
             }
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: OopLg.inh\nSmall quantity of initial parameters.\n\n")
+            println("Warn: OopLg.inh\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
     }

@@ -16,11 +16,13 @@ class FuncLg(): ProgLg() {
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: FuncLg.creationYear\nSmall quantity of initial parameters.\n\n")
+            println("Warn: FuncLg.creationYear\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: FuncLg.creationYear\nWrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
+            println("Warn: FuncLg.creationYear\n" +
+                    "Wrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -28,11 +30,13 @@ class FuncLg(): ProgLg() {
             str.split(' ')[2].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: FuncLg.mentions\nSmall quantity of initial parameters.\n\n")
+            println("Warn: FuncLg.mentions\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: FuncLg.mentions\nWrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
+            println("Warn: FuncLg.mentions\n" +
+                    "Wrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -44,11 +48,13 @@ class FuncLg(): ProgLg() {
             }
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: FuncLg.tipization\nSmall quantity of initial parameters.\n\n")
+            println("Warn: FuncLg.tipization\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: FuncLg.tipization\nWrong initial parameter \"tipization\" (Can't convert String to Int).\n\n")
+            println("Warn: FuncLg.tipization\n" +
+                    "Wrong initial parameter \"tipization\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -60,11 +66,13 @@ class FuncLg(): ProgLg() {
             }
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: FuncLg.isLazyCalc\nSmall quantity of initial parameters.\n\n")
+            println("Warn: FuncLg.isLazyCalc\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: FuncLg.isLazyCalc\nWrong initial parameter \"isLazyCalc\" (Can't convert String to Int).\n\n")
+            println("Warn: FuncLg.isLazyCalc\n" +
+                    "Wrong initial parameter \"isLazyCalc\" (Can't convert String to Int).\n\n")
             null
         }
     }

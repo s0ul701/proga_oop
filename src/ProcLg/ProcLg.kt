@@ -3,10 +3,10 @@ package ProcLg
 import ProgLg.ProgLg
 import java.io.FileWriter
 
-class ProcLg() : ProgLg() {
-    var isAbstractDataType : Boolean? = null
+class ProcLg(): ProgLg() {
+    var isAbstractDataType: Boolean? = null
 
-    constructor(str: String) : this() {
+    constructor(str: String): this() {
         InData(str)
     }
 
@@ -15,11 +15,13 @@ class ProcLg() : ProgLg() {
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: ProcLg.creationYear\nSmall quantity of initial parameters.\n\n")
+            println("Warn: ProcLg.creationYear\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: ProcLg.creationYear\nWrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
+            println("Warn: ProcLg.creationYear\n" +
+                    "Wrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -27,11 +29,13 @@ class ProcLg() : ProgLg() {
             str.split(' ')[2].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: ProcLg.mentions\nSmall quantity of initial parameters.\n\n")
+            println("Warn: ProcLg.mentions\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: ProcLg.mentions\nWrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
+            println("Warn: ProcLg.mentions\n" +
+                    "Wrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -40,13 +44,15 @@ class ProcLg() : ProgLg() {
                 "0" -> false
                 "1" -> true
                 else -> {
-                    println("Warn: ProcLg.isAbstractDataType\nWrong initial parameter \"isAbstractDataType\".\n\n")
+                    println("Warn: ProcLg.isAbstractDataType\n" +
+                            "Wrong initial parameter \"isAbstractDataType\".\n\n")
                     null
                 }
             }
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: ProcLg.isAbstractDataType\nSmall quantity of initial parameters.\n\n")
+            println("Warn: ProcLg.isAbstractDataType\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
     }

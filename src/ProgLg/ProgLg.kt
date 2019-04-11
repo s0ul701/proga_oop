@@ -6,19 +6,21 @@ import OopLg.*
 import FuncLg.*
 
 open class ProgLg() {
-    var creationYear : Int? = null
+    var creationYear: Int? = null
     protected var mentions: Int? = null
 
-    constructor(str: String) : this() {
+    constructor(str: String): this() {
         creationYear = try {
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: ProgLg.creationYear\nSmall quantity of initial parameters.\n\n")
+            println("Warn: ProgLg.creationYear\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: ProgLg.creationYear\nWrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
+            println("Warn: ProgLg.creationYear\n" +
+                    "Wrong initial parameter \"creationYear\" (Can't convert String to Int).\n\n")
             null
         }
 
@@ -26,18 +28,20 @@ open class ProgLg() {
             str.split(' ')[2].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
-            println("Warn: ProcLg.mentions\nSmall quantity of initial parameters.\n\n")
+            println("Warn: ProcLg.mentions\n" +
+                    "Small quantity of initial parameters.\n\n")
             null
         }
         catch (e: NumberFormatException) {
-            println("Warn: ProcLg.mentions\nWrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
+            println("Warn: ProcLg.mentions\n" +
+                    "Wrong initial parameter \"mentions\" (Can't convert String to Int).\n\n")
             null
         }
         In(str)
     }
 
     companion object Companion {
-        fun In(str : String) : ProgLg? {
+        fun In(str: String): ProgLg? {
             var pg = ProgLg()
 
             try {
@@ -46,13 +50,15 @@ open class ProgLg() {
                     "1" -> OopLg(str)
                     "2" -> FuncLg(str)
                     else -> {
-                        println("Warn: ProgLg.In\nWrong initial parameter \"langType\".\n\n")
+                        println("Warn: ProgLg.In\n" +
+                                "Wrong initial parameter \"langType\".\n\n")
                         return null
                     }
                 }
             }
             catch (e: IndexOutOfBoundsException) {
-                println("Warn: ProgLg.langType\nSmall quantity of initial parameters.\n\n")
+                println("Warn: ProgLg.langType\n" +
+                        "Small quantity of initial parameters.\n\n")
                 return null
             }
             return pg

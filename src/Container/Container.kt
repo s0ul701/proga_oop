@@ -7,18 +7,18 @@ import ProcLg.*
 import ProgLg.*
 
 class Container {
-    var len : Int = 0
-    var pg : MutableList<ProgLg?> = mutableListOf()
+    var len: Int = 0
+    var pg: MutableList<ProgLg?> = mutableListOf()
 
-    fun In(fileIn : FileReader) {
-        val lines : List<String> = fileIn.readLines()
+    fun In(fileIn: FileReader) {
+        val lines: List<String> = fileIn.readLines()
         for (line in lines) {
             pg.add((ProgLg.Companion::In)(line))
             len++
         }
     }
 
-    fun Out(fileOut : FileWriter) {
+    fun Out(fileOut: FileWriter) {
         fileOut.write("Elements:\n\n")
         for (item in pg) {
             if (item != null) {
@@ -70,7 +70,7 @@ class Container {
         }
     }
 
-    fun FilterOut(fileOut : FileWriter) {
+    fun FilterOut(fileOut: FileWriter) {
         for(item in pg) {
             if (item != null)
                 if (item is ProcLg) {

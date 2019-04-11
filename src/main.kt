@@ -5,11 +5,11 @@ import kotlin.system.exitProcess
 import Container.*
 import java.io.FileWriter
 
-// val - неизмен, var - измен
 
 fun main(args: Array<String>) {
     if (args.size != 2) {
-        println("***\nIncorrect command line!\nWaited: command in_file out_file\n***")
+        println("***\nIncorrect command line!\n" +
+                "Waited: command in_file out_file\n***")
         exitProcess(1)
     }
 
@@ -55,5 +55,3 @@ fun main(args: Array<String>) {
     fileOut2.close()
     println("***\nStop\n***\n")
 }
-
-//ввод, вывод на всех уровнях, сортировака, фильтрация, расчетаня функция
