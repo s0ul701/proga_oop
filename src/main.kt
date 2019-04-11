@@ -1,9 +1,6 @@
-import java.io.File
 import java.io.FileReader
 import java.io.FileWriter
 import kotlin.system.exitProcess
-
-// val - неизмен, var - измен
 
 fun main(args: Array<String>) {
     if (args.size != 2) {
@@ -13,7 +10,7 @@ fun main(args: Array<String>) {
 
     println("***\nStart\n***\n")
 
-    var cont : Container = Container()
+    val cont = Container()
 
     val fileIn = FileReader(args[0])
     cont.In(fileIn)
@@ -24,6 +21,11 @@ fun main(args: Array<String>) {
     cont.Out(fileOut1)
     fileOut1.close()
     println("***\nFilled file\n***\n")
+
+    val fileOut3 = FileWriter(args[1], false)
+    cont.Multimethod(fileOut3)
+    fileOut3.close()
+    println("***\nMultimethod\n***\n")
 
     cont.Clear()
     println("***\nErased container\n***\n")

@@ -24,4 +24,12 @@ class Container {
     fun Clear() {
         pg.clear()
     }
+
+    fun Multimethod(fileOut: FileWriter) {
+        for (item1 in pg) {
+            for (item2 in pg) {
+                item1.Multimethod(item2, fileOut)
+            }
+        }
+    }
 }

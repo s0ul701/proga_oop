@@ -23,4 +23,10 @@ open class ProgLg() {
     open fun InData(str: String) {}
 
     open fun OutData(fileOut: FileWriter) {}
+
+    open fun Multimethod(progLg: ProgLg, fileOut: FileWriter) {}
+
+    open fun MMOop(fileOut: FileWriter) {}
+
+    open fun MMProc(fileOut: FileWriter) {}
 }

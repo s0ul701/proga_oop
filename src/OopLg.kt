@@ -19,4 +19,16 @@ class OopLg() : ProgLg() {
     }
 
     override fun OutData(fileOut: FileWriter) = fileOut.write("OOP\tYear creation: $creationYear\t$inh\n")
+
+    override fun MMProc(fileOut: FileWriter) {
+        fileOut.write("PROCEDURE and OOP\n")
+    }
+
+    override fun MMOop(fileOut: FileWriter) {
+        fileOut.write("OOP and OOP\n")
+    }
+
+    override fun Multimethod(progLg: ProgLg, fileOut: FileWriter) {
+        progLg.MMOop(fileOut)
+    }
 }
