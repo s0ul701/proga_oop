@@ -92,4 +92,20 @@ class OopLg(): ProgLg() {
         fileOut.write("\n")
 
     }
+
+    override fun MMProc(fileOut: FileWriter) {
+        fileOut.write("PROCEDURE and OOP\n")
+    }
+
+    override fun MMOop(fileOut: FileWriter) {
+        fileOut.write("OOP and OOP\n")
+    }
+
+    override fun MMFunc(fileOut: FileWriter) {
+        fileOut.write("FUNC and OOP\n")
+    }
+
+    override fun Multimethod(progLg: ProgLg?, fileOut: FileWriter) {
+        progLg?.MMOop(fileOut)
+    }
 }

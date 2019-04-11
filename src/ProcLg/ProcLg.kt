@@ -91,4 +91,20 @@ class ProcLg(): ProgLg() {
         fileOut.write("\n")
 
     }
+
+    override fun Multimethod(progLg: ProgLg?, fileOut: FileWriter) {
+        progLg?.MMProc(fileOut)
+    }
+
+    override fun MMProc(fileOut: FileWriter) {
+        fileOut.write("PROCEDURE and PROCEDURE\n")
+    }
+
+    override fun MMOop(fileOut: FileWriter) {
+        fileOut.write("OOP and PROCEDURE\n")
+    }
+
+    override fun MMFunc(fileOut: FileWriter) {
+        fileOut.write("FUNC and PROCEDURE\n")
+    }
 }
