@@ -11,11 +11,11 @@ class FuncLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) {
+    override fun InData(str: String) { // Функция заполнения объекта функционального языка
         creationYear = try {
             str.split(' ')[1].toInt()
         }
-        catch (e: IndexOutOfBoundsException) {
+        catch (e: IndexOutOfBoundsException) { // Тело проверки на правильность входных данных
             println("Warn: FuncLg.creationYear\n" +
                     "Small quantity of initial parameters.\n\n")
             null
@@ -77,7 +77,7 @@ class FuncLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) {
+    override fun OutData(fileOut: FileWriter) { // Функция вывода в файл
         fileOut.write("Language type: Func\n")
 
         if (creationYear != null) {

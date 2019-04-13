@@ -10,8 +10,8 @@ class ProcLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) {
-        creationYear = try {
+    override fun InData(str: String) { // Ввод объекта процедурный язык
+        creationYear = try { // Проверка на корректность
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
@@ -57,7 +57,7 @@ class ProcLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) {
+    override fun OutData(fileOut: FileWriter) { // Вывод объекта процедурного язык
         fileOut.write("Language type: Proc\n")
 
         if (creationYear != null) {

@@ -10,7 +10,7 @@ class Container {
     var len: Int = 0
     var pg: MutableList<ProgLg?> = mutableListOf()
 
-    fun In(fileIn: FileReader) {
+    fun In(fileIn: FileReader) { // Тела функций контейнеров
         val lines: List<String> = fileIn.readLines()
         for (line in lines) {
             pg.add((ProgLg.Companion::In)(line))
@@ -30,11 +30,11 @@ class Container {
         }
     }
 
-    fun Clear() {
+    fun Clear() { // Функция очистки контейнеров
         pg.clear()
     }
 
-    fun Sort() {
+    fun Sort() { // Функция сортировки по возрасту языка программирования
         for (i in 0 until len) {
             if (pg[i] == null) {
                 pg.add(pg.removeAt(i))
@@ -70,7 +70,7 @@ class Container {
         }
     }
 
-    fun FilterOut(fileOut: FileWriter) {
+    fun FilterOut(fileOut: FileWriter) { // Функция фильтрованного вывода
         for(item in pg) {
             if (item != null)
                 if (item is ProcLg) {

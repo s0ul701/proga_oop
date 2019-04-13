@@ -10,11 +10,11 @@ class OopLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) {
+    override fun InData(str: String) { Заполнение объекта ООП язык
         creationYear = try {
             str.split(' ')[1].toInt()
         }
-        catch (e: IndexOutOfBoundsException) {
+        catch (e: IndexOutOfBoundsException) { // Проверка на корректность
             println("Warn: OopLg.creationYear\n" +
                     "Small quantity of initial parameters.\n\n")
             null
@@ -58,7 +58,7 @@ class OopLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) {
+    override fun OutData(fileOut: FileWriter) { // Вывод объекта ООП язык
         fileOut.write("Language type: Oop\n")
 
         if (creationYear != null) {

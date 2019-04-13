@@ -6,7 +6,7 @@ import Container.*
 import java.io.FileWriter
 
 
-fun main(args: Array<String>) {
+fun main(args: Array<String>) { // Проверка корректности количества входных аргументов
     if (args.size != 2) {
         println("***\nIncorrect command line!\n" +
                 "Waited: command in_file out_file\n***")
@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     val fileIn: FileReader
 
     try {
-        fileIn = FileReader(args[0])
+        fileIn = FileReader(args[0]) // Проверка на открытие входного файла
     }
     catch (e: FileNotFoundException) {
         println("File not exist!\n")
@@ -31,7 +31,18 @@ fun main(args: Array<String>) {
     fileIn.close()
     println("***\nFilled container\n***\n")
 
-    val fileOut1 = FileWriter(args[1], false)
+val fileOutTest: FileReader
+
+    try { 
+        fileOutTest = FileReader(args[1]) // Проверка на открытие выходного файла
+
+    }
+    catch (e: FileNotFoundException) {
+        println("File not exist!\n") 
+        return
+    }
+
+    val fileOut1 = FileWriter(args[1], false) // Вывод в файл
     cont.Out(fileOut1)
     fileOut1.close()
     println("***\nFilled file\n***\n")

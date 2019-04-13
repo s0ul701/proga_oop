@@ -40,7 +40,7 @@ open class ProgLg() {
         In(str)
     }
 
-    companion object Companion {
+    companion object Companion { // Определение типа языка программирования
         fun In(str: String): ProgLg? {
             var pg = ProgLg()
 
@@ -73,7 +73,7 @@ open class ProgLg() {
         }
     }
 
-    open fun InData(str: String) {}
+    open fun InData(str: String) {} // Сигнатуры функций
 
     open fun OutData(fileOut: FileWriter) {}
 }
