@@ -1,4 +1,4 @@
-package Container
+п»їpackage Container
 
 import java.io.FileReader
 import java.io.FileWriter
@@ -10,7 +10,7 @@ class Container {
     var len: Int = 0
     var pg: MutableList<ProgLg?> = mutableListOf()
 
-    fun In(fileIn: FileReader) { // Тела функций контейнеров
+    fun In(fileIn: FileReader) { // РўРµР»Р° С„СѓРЅРєС†РёР№ РєРѕРЅС‚РµР№РЅРµСЂРѕРІ
         val lines: List<String> = fileIn.readLines()
         for (line in lines) {
             pg.add((ProgLg.Companion::In)(line))
@@ -30,11 +30,11 @@ class Container {
         }
     }
 
-    fun Clear() { // Функция очистки контейнеров
+    fun Clear() { // Р¤СѓРЅРєС†РёСЏ РѕС‡РёСЃС‚РєРё РєРѕРЅС‚РµР№РЅРµСЂРѕРІ
         pg.clear()
     }
 
-    fun Sort() { // Функция сортировки по возрасту языка программирования
+    fun Sort() { // Р¤СѓРЅРєС†РёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё РїРѕ РІРѕР·СЂР°СЃС‚Сѓ СЏР·С‹РєР° РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ
         for (i in 0 until len) {
             if (pg[i] == null) {
                 pg.add(pg.removeAt(i))
@@ -70,7 +70,7 @@ class Container {
         }
     }
 
-    fun FilterOut(fileOut: FileWriter) { // Функция фильтрованного вывода
+    fun FilterOut(fileOut: FileWriter) { // Р¤СѓРЅРєС†РёСЏ С„РёР»СЊС‚СЂРѕРІР°РЅРЅРѕРіРѕ РІС‹РІРѕРґР°
         for(item in pg) {
             if (item != null)
                 if (item is ProcLg) {

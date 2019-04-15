@@ -1,4 +1,4 @@
-package OopLg
+п»їpackage OopLg
 
 import ProgLg.*
 import java.io.FileWriter
@@ -10,11 +10,11 @@ class OopLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) { Заполнение объекта ООП язык
+    override fun InData(str: String) { Р—Р°РїРѕР»РЅРµРЅРёРµ РѕР±СЉРµРєС‚Р° РћРћРџ СЏР·С‹Рє
         creationYear = try {
             str.split(' ')[1].toInt()
         }
-        catch (e: IndexOutOfBoundsException) { // Проверка на корректность
+        catch (e: IndexOutOfBoundsException) { // РџСЂРѕРІРµСЂРєР° РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ
             println("Warn: OopLg.creationYear\n" +
                     "Small quantity of initial parameters.\n\n")
             null
@@ -58,7 +58,7 @@ class OopLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) { // Вывод объекта ООП язык
+    override fun OutData(fileOut: FileWriter) { // Р’С‹РІРѕРґ РѕР±СЉРµРєС‚Р° РћРћРџ СЏР·С‹Рє
         fileOut.write("Language type: Oop\n")
 
         if (creationYear != null) {

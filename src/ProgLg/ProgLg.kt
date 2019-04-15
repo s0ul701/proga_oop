@@ -1,4 +1,4 @@
-package ProgLg
+п»їpackage ProgLg
 
 import java.io.FileWriter
 import ProcLg.*
@@ -40,7 +40,7 @@ open class ProgLg() {
         In(str)
     }
 
-    companion object Companion { // Определение типа языка программирования
+    companion object Companion { // РћРїСЂРµРґРµР»РµРЅРёРµ С‚РёРїР° СЏР·С‹РєР° РїСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёСЏ
         fun In(str: String): ProgLg? {
             var pg = ProgLg()
 
@@ -73,7 +73,7 @@ open class ProgLg() {
         }
     }
 
-    open fun InData(str: String) {} // Сигнатуры функций
+    open fun InData(str: String) {} // РЎРёРіРЅР°С‚СѓСЂС‹ С„СѓРЅРєС†РёР№
 
     open fun OutData(fileOut: FileWriter) {}
 }

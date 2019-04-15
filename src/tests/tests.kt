@@ -1,4 +1,4 @@
-package tests
+﻿package tests
 
 import jdk.nashorn.internal.runtime.JSType
 import org.junit.jupiter.api.Assertions.assertEquals

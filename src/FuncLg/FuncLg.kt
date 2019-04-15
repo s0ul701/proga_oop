@@ -1,4 +1,4 @@
-package FuncLg
+п»їpackage FuncLg
 
 import ProgLg.*
 import java.io.FileWriter
@@ -11,11 +11,11 @@ class FuncLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) { // Функция заполнения объекта функционального языка
+    override fun InData(str: String) { // Р¤СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РѕР±СЉРµРєС‚Р° С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРіРѕ СЏР·С‹РєР°
         creationYear = try {
             str.split(' ')[1].toInt()
         }
-        catch (e: IndexOutOfBoundsException) { // Тело проверки на правильность входных данных
+        catch (e: IndexOutOfBoundsException) { // РўРµР»Рѕ РїСЂРѕРІРµСЂРєРё РЅР° РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…
             println("Warn: FuncLg.creationYear\n" +
                     "Small quantity of initial parameters.\n\n")
             null
@@ -77,7 +77,7 @@ class FuncLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) { // Функция вывода в файл
+    override fun OutData(fileOut: FileWriter) { // Р¤СѓРЅРєС†РёСЏ РІС‹РІРѕРґР° РІ С„Р°Р№Р»
         fileOut.write("Language type: Func\n")
 
         if (creationYear != null) {

@@ -1,4 +1,4 @@
-package ProcLg
+п»їpackage ProcLg
 
 import ProgLg.ProgLg
 import java.io.FileWriter
@@ -10,8 +10,8 @@ class ProcLg(): ProgLg() {
         InData(str)
     }
 
-    override fun InData(str: String) { // Ввод объекта процедурный язык
-        creationYear = try { // Проверка на корректность
+    override fun InData(str: String) { // Р’РІРѕРґ РѕР±СЉРµРєС‚Р° РїСЂРѕС†РµРґСѓСЂРЅС‹Р№ СЏР·С‹Рє
+        creationYear = try { // РџСЂРѕРІРµСЂРєР° РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ
             str.split(' ')[1].toInt()
         }
         catch (e: IndexOutOfBoundsException) {
@@ -57,7 +57,7 @@ class ProcLg(): ProgLg() {
         }
     }
 
-    override fun OutData(fileOut: FileWriter) { // Вывод объекта процедурного язык
+    override fun OutData(fileOut: FileWriter) { // Р’С‹РІРѕРґ РѕР±СЉРµРєС‚Р° РїСЂРѕС†РµРґСѓСЂРЅРѕРіРѕ СЏР·С‹Рє
         fileOut.write("Language type: Proc\n")
 
         if (creationYear != null) {

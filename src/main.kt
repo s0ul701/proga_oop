@@ -1,4 +1,4 @@
-import java.io.FileNotFoundException
+п»їimport java.io.FileNotFoundException
 import java.io.FileReader
 import kotlin.system.exitProcess
 
@@ -6,7 +6,7 @@ import Container.*
 import java.io.FileWriter
 
 
-fun main(args: Array<String>) { // Проверка корректности количества входных аргументов
+fun main(args: Array<String>) { // РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РєРѕР»РёС‡РµСЃС‚РІР° РІС…РѕРґРЅС‹С… Р°СЂРіСѓРјРµРЅС‚РѕРІ
     if (args.size != 2) {
         println("***\nIncorrect command line!\n" +
                 "Waited: command in_file out_file\n***")
@@ -20,7 +20,7 @@ fun main(args: Array<String>) { // Проверка корректности количества входных аргу
     val fileIn: FileReader
 
     try {
-        fileIn = FileReader(args[0]) // Проверка на открытие входного файла
+        fileIn = FileReader(args[0]) // РџСЂРѕРІРµСЂРєР° РЅР° РѕС‚РєСЂС‹С‚РёРµ РІС…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
     }
     catch (e: FileNotFoundException) {
         println("File not exist!\n")
@@ -34,7 +34,7 @@ fun main(args: Array<String>) { // Проверка корректности количества входных аргу
 val fileOutTest: FileReader
 
     try { 
-        fileOutTest = FileReader(args[1]) // Проверка на открытие выходного файла
+        fileOutTest = FileReader(args[1]) // РџСЂРѕРІРµСЂРєР° РЅР° РѕС‚РєСЂС‹С‚РёРµ РІС‹С…РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р°
 
     }
     catch (e: FileNotFoundException) {
@@ -42,7 +42,7 @@ val fileOutTest: FileReader
         return
     }
 
-    val fileOut1 = FileWriter(args[1], false) // Вывод в файл
+    val fileOut1 = FileWriter(args[1], false) // Р’С‹РІРѕРґ РІ С„Р°Р№Р»
     cont.Out(fileOut1)
     fileOut1.close()
     println("***\nFilled file\n***\n")
